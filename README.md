@@ -37,9 +37,13 @@ From now on, use the terminal in the docker container:
 ### checout and compile
   ```{.sh}
   repo init -u https://github.com/acrontech-solutions/esme-linux.git -b main -m imx-6.6.52-2.2.0.xml
-  repo sync
+  repo sync -j`nproc`
   ```
 
+  ```{.sh}
+EULA=1 MACHINE=imx93-11x11-lpddr4x-evk DISTRO=fsl-imx-xwayland source imx-setup-release.sh -b build_fsl-imx-xwayland
+bitbake imx-image-core
+  ```
 ## Make changes in the kernel
   ```{.sh}
   devtool modify linux-imx
@@ -57,5 +61,10 @@ commit changes, and create patch file:
   ```
 copy patch file to the meta-acrontech directory and git add/commit/push
 
+### Useful commands
+list yocto layers:
+  ```{.sh}
+  bitbake-layers show-layers 
+  ```
 
 
