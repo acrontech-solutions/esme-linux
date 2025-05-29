@@ -38,7 +38,7 @@ This will use the repo tool to get source files from different repositories:
   ```
 This will configure the yocto project for our imx93 device, and other settings:
   ```{.sh}
-EULA=1 MACHINE=imx93-11x11-lpddr4x-evk DISTRO=fsl-imx-xwayland source imx-setup-release.sh -b build_fsl-imx-xwayland
+EULA=1 MACHINE=imx93-evk-lepton DISTRO=fsl-imx-xwayland source imx-setup-release.sh -b build_fsl-imx-xwayland
   ```
 This will add the layer from acrontech which includes recipes for modifying device tree, kernel modules, images...
 ```{.sh}
@@ -56,13 +56,13 @@ bitbake target_image
 
 Compilation results are stored in this directory:
   ```{.sh}
-build_fsl-imx-xwayland/tmp/deploy/images/imx93-11x11-lpddr4x-evk/
+build_fsl-imx-xwayland/tmp/deploy/images/imx93-evk-lepton/
 ```
 ### Program an image
 We use `uuu.exe` under windows to program the whole image to emmc storage:
 in windows terminal, or power shell:
 ```{.sh}
-./uuu.exe -b emmc_all acrontech-image-imx93-11x11-lpddr4x-evk.rootfs.wic.zst
+./uuu.exe -b emmc_all acrontech-image-imx93-evk-lepton.rootfs.wic.zst
 ```
 ## Make changes in the kernel
   ```{.sh}
