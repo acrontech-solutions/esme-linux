@@ -42,6 +42,7 @@ From now on, use the terminal in the docker container:
 
   ```{.sh}
 EULA=1 MACHINE=imx93-11x11-lpddr4x-evk DISTRO=fsl-imx-xwayland source imx-setup-release.sh -b build_fsl-imx-xwayland
+bitbake-layers add-layer sources/meta-acrontech
 bitbake imx-image-core
   ```
 ## Make changes in the kernel
