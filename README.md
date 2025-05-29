@@ -40,4 +40,22 @@ From now on, use the terminal in the docker container:
   repo sync
   ```
 
+## Make changes in the kernel
+  ```{.sh}
+  devtool modify linux-imx
+  ```
+It will create a directory with the kernel sources
+Make modifications here, build it with:
+  ```{.sh}
+  devtool build linux-imx
+  ```
+commit changes, and create patch file:
+  ```{.sh}
+  git add .
+  git commit -m "my linux modifications"
+  git format-patch -1
+  ```
+copy patch file to the meta-acrontech directory and git add/commit/push
+
+
 
