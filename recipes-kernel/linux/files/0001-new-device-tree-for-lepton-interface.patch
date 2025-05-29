@@ -5,9 +5,9 @@ Subject: [PATCH] new device tree for lepton interface
 
 ---
  arch/arm64/boot/dts/freescale/Makefile        |   4 +-
- .../dts/freescale/imx93_11x11-evk-lepton.dts  | 178 ++++++++++++++++++
+ .../dts/freescale/imx93-11x11-evk-lepton.dts  | 178 ++++++++++++++++++
  2 files changed, 181 insertions(+), 1 deletion(-)
- create mode 100644 arch/arm64/boot/dts/freescale/imx93_11x11-evk-lepton.dts
+ create mode 100644 arch/arm64/boot/dts/freescale/imx93-11x11-evk-lepton.dts
 
 diff --git a/arch/arm64/boot/dts/freescale/Makefile b/arch/arm64/boot/dts/freescale/Makefile
 index efe32533733e..555eced8e8fc 100644
@@ -31,11 +31,11 @@ index efe32533733e..555eced8e8fc 100644
  
  dtb-$(CONFIG_ARCH_MXC) += imx93-11x11-evk-pmic-pf0900.dtb
  dtb-$(CONFIG_ARCH_MXC) += imx93-11x11-evk-pmic-pf0900-root.dtb
-diff --git a/arch/arm64/boot/dts/freescale/imx93_11x11-evk-lepton.dts b/arch/arm64/boot/dts/freescale/imx93_11x11-evk-lepton.dts
+diff --git a/arch/arm64/boot/dts/freescale/imx93-11x11-evk-lepton.dts b/arch/arm64/boot/dts/freescale/imx93-11x11-evk-lepton.dts
 new file mode 100644
 index 000000000000..3d9f6f1227ec
 --- /dev/null
-+++ b/arch/arm64/boot/dts/freescale/imx93_11x11-evk-lepton.dts
++++ b/arch/arm64/boot/dts/freescale/imx93-11x11-evk-lepton.dts
 @@ -0,0 +1,178 @@
 +// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
 +/*
