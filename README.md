@@ -87,4 +87,10 @@ list yocto layers:
   bitbake-layers show-layers 
   ```
 
+generate SDK for linux application development:
+```{.sh}
+bitbake acrontech-image -c populate_sdk
+```
+
+
 
