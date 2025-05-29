@@ -57,5 +57,10 @@ commit changes, and create patch file:
   ```
 copy patch file to the meta-acrontech directory and git add/commit/push
 
+### Useful commands
+list yocto layers:
+  ```{.sh}
+  bitbake-layers show-layers 
+  ```
 
 
