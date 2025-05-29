@@ -44,7 +44,7 @@ This will add the layer from acrontech which includes recipes for modifying devi
 ```{.sh}
 bitbake-layers add-layer sources/meta-acrontech
 ```
-Compile an image:
+### Compile an image
   ```{.sh}
 bitbake target_image
   ```
@@ -53,6 +53,17 @@ bitbake target_image
 | ------------- | ------------- |
 | imx-image-core  | An i.MX image with i.MX test applications to be used for Wayland backends. This image is used by our daily core testing.   |
 | acrontech-image  | Image created by acrontech to develop solution for accessing lepton flir camera images realtime, and process them on linux. |
+
+Compilation results are stored in this directory:
+  ```{.sh}
+build_fsl-imx-xwayland/tmp/deploy/images/imx93-11x11-lpddr4x-evk/
+```
+### Program an image
+We use `uuu.exe` under windows to program the whole image to emmc storage:
+in windows terminal, or power shell:
+```{.sh}
+./uuu.exe -b emmc_all acrontech-image-imx93-11x11-lpddr4x-evk.rootfs.wic.zst
+```
 ## Make changes in the kernel
   ```{.sh}
   devtool modify linux-imx
@@ -70,7 +81,7 @@ commit changes, and create patch file:
   ```
 copy patch file to the meta-acrontech directory and git add/commit/push
 
-### Useful commands
+### Other useful commands
 list yocto layers:
   ```{.sh}
   bitbake-layers show-layers 
