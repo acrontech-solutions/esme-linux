@@ -43,10 +43,11 @@ EULA=1 MACHINE=imx93-11x11-lpddr4x-evk DISTRO=fsl-imx-xwayland source imx-setup-
 This will add the layer from acrontech which includes recipes for modifying device tree, kernel modules, images...
 ```{.sh}
 bitbake-layers add-layer sources/meta-acrontech
+cd ..
 ```
 ### Compile an image
   ```{.sh}
-bitbake target_image
+bitbake acrontech-image
   ```
 `target_image` can be :
 | target_image  | description |
