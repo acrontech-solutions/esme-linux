@@ -1,0 +1,28 @@
+From 0b8022f5c21f7addc95bb783b1276e0b00db757a Mon Sep 17 00:00:00 2001
+From: Csaba Hegedus <csaba.hegedus@acrontech.eu>
+Date: Wed, 4 Jun 2025 15:32:49 +0000
+Subject: [PATCH] fixed error
+
+---
+ arch/arm64/boot/dts/freescale/imx93-11x11-evk-lepton.dts | 5 -----
+ 1 file changed, 5 deletions(-)
+
+diff --git a/arch/arm64/boot/dts/freescale/imx93-11x11-evk-lepton.dts b/arch/arm64/boot/dts/freescale/imx93-11x11-evk-lepton.dts
+index 6986d457380e..9b1f5b075005 100644
+--- a/arch/arm64/boot/dts/freescale/imx93-11x11-evk-lepton.dts
++++ b/arch/arm64/boot/dts/freescale/imx93-11x11-evk-lepton.dts
+@@ -9,11 +9,6 @@
+ /delete-node/ &lpi2c2;
+ /delete-node/ &ethosu_mem;
+ 
+-&lpi2c2 {
+-	/delete-property/ dmas;
+-	/delete-property/ dma-names;
+-};
+-
+ &lpi2c3 {
+ 	/delete-property/ dmas;
+ 	/delete-property/ dma-names;
+-- 
+2.34.1
+
