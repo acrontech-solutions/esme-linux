@@ -1,0 +1,86 @@
+From dfac63581adc588aad2a98769b5943d78a5dac8b Mon Sep 17 00:00:00 2001
+From: Csaba Hegedus <csaba.hegedus@acrontech.eu>
+Date: Wed, 4 Jun 2025 15:12:15 +0000
+Subject: [PATCH] added new device tree
+
+---
+ arch/arm64/boot/dts/freescale/Makefile        |  4 +-
+ .../dts/freescale/imx93-11x11-evk-lepton.dts  | 44 +++++++++++++++++++
+ 2 files changed, 47 insertions(+), 1 deletion(-)
+ create mode 100644 arch/arm64/boot/dts/freescale/imx93-11x11-evk-lepton.dts
+
+diff --git a/arch/arm64/boot/dts/freescale/Makefile b/arch/arm64/boot/dts/freescale/Makefile
+index efe32533733e..555eced8e8fc 100644
+--- a/arch/arm64/boot/dts/freescale/Makefile
++++ b/arch/arm64/boot/dts/freescale/Makefile
+@@ -386,7 +386,8 @@ dtb-$(CONFIG_ARCH_MXC) += imx93-11x11-evk.dtb \
+ 			  imx93-11x11-evk-mt9m114.dtb \
+ 			  imx93-11x11-evk-ld.dtb \
+ 			  imx93-11x11-evk-iw612-otbr.dtb \
+-			  imx93-11x11-evk-rpmsg.dtb imx93-11x11-evk-rpmsg-lpv.dtb
++			  imx93-11x11-evk-rpmsg.dtb imx93-11x11-evk-rpmsg-lpv.dtb \
++			  imx93-11x11-evk-lepton.dtb
+ 
+ dtb-$(CONFIG_ARCH_MXC) += imx91-11x11-evk.dtb \
+ 			  imx91-11x11-evk-flexspi-m2.dtb imx91-11x11-evk-flexspi-nand-m2.dtb \
+@@ -413,6 +414,7 @@ imx93-11x11-evk-pmic-pf0900-mt9m114-dtbs := imx93-11x11-evk-mt9m114.dtb imx93-11
+ imx93-11x11-evk-pmic-pf0900-ld-dtbs := imx93-11x11-evk-ld.dtb imx93-11x11-evk-pmic-pf0900.dtbo
+ imx93-11x11-evk-pmic-pf0900-rpmsg-dtbs := imx93-11x11-evk-rpmsg.dtb imx93-11x11-evk-pmic-pf0900.dtbo
+ imx93-11x11-evk-pmic-pf0900-rpmsg-lpv-dtbs := imx93-11x11-evk-rpmsg-lpv.dtb imx93-11x11-evk-pmic-pf0900.dtbo
++imx93-11x11-evk-pmic-pf0900-lepton-dtbs := imx93-11x11-evk-lepton.dtb imx93-11x11-evk-pmic-pf0900.dtbo
+ 
+ dtb-$(CONFIG_ARCH_MXC) += imx93-11x11-evk-pmic-pf0900.dtb
+ dtb-$(CONFIG_ARCH_MXC) += imx93-11x11-evk-pmic-pf0900-root.dtb
+diff --git a/arch/arm64/boot/dts/freescale/imx93-11x11-evk-lepton.dts b/arch/arm64/boot/dts/freescale/imx93-11x11-evk-lepton.dts
+new file mode 100644
+index 000000000000..6986d457380e
+--- /dev/null
++++ b/arch/arm64/boot/dts/freescale/imx93-11x11-evk-lepton.dts
+@@ -0,0 +1,44 @@
++// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
++/*
++ * Copyright 2023 NXP
++ */
++
++#include "imx93-11x11-evk.dts"
++
++/delete-node/ &lpi2c1;
++/delete-node/ &lpi2c2;
++/delete-node/ &ethosu_mem;
++
++&lpi2c2 {
++	/delete-property/ dmas;
++	/delete-property/ dma-names;
++};
++
++&lpi2c3 {
++	/delete-property/ dmas;
++	/delete-property/ dma-names;
++};
++
++&sai3 {
++	status = "disabled";
++};
++
++&micfil {
++	status = "disabled";
++};
++
++&edma1{
++	status = "disabled";
++};
++
++&edma2{
++	status = "disabled";
++};
++
++&sai1 {
++	status = "disabled";
++};
++
++&xcvr {
++	status = "disabled";
++};
+-- 
+2.34.1
+
