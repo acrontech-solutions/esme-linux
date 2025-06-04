@@ -39,11 +39,11 @@ This will use the repo tool to get source files from different repositories:
 This will configure the yocto project for our imx93 device, and other settings:
   ```{.sh}
 EULA=1 MACHINE=imx93-11x11-lpddr4x-evk DISTRO=fsl-imx-xwayland source imx-setup-release.sh -b build_fsl-imx-xwayland
+cd ..
   ```
 This will add the layer from acrontech which includes recipes for modifying device tree, kernel modules, images...
 ```{.sh}
 bitbake-layers add-layer sources/meta-acrontech
-cd ..
 ```
 ### Compile an image
   ```{.sh}
