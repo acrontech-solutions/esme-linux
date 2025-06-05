@@ -82,6 +82,32 @@ commit changes, and create patch file:
   ```
 copy patch file to the meta-acrontech directory and git add/commit/push
 
+## make changes on device tree only, and change in running linux
+- export kernel
+- make changes
+- compile kernel
+  ```{.sh}
+  devtool modify linux-imx
+  ...
+  devtool build linux-imx  
+  ```
+- locate the compile .dtb file, copy to an SDCARD
+- insert SDCARD to evk board
+- boot linux
+- mount sdcard and emmc, copy dtb to emmc
+- reboot evk
+- stop uboot
+```{.sh}
+editenv fdtfile
+```
+enter: imx93-11x11-evk-lepton.dtb
+
+If you want to make the changes stick:
+```{.sh}
+saveenv
+boot
+```
+
 ### Other useful commands
 list yocto layers:
   ```{.sh}
