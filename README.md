@@ -123,4 +123,8 @@ will generate a .sh script, which can be installed on a linux dev machine:
 build_fsl-imx-xwayland/tmp/deploy/sdk/fsl-imx-xwayland-glibc-x86_64-acrontech-image-armv8a-imx93-11x11-lpddr4x-evk-toolchain-6.6-scarthgap.sh
 ```
 
+use devtool to compile a full image with changes made on the workspace
+```{.sh}
+devtool build-image acrontech-image
+```
 
