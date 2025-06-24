@@ -108,6 +108,18 @@ saveenv
 boot
 ```
 
+## load an M33 binary from emmc in u-boot manually
+stop u-boot after power on, then:
+```{.sh}
+load mmc 1:1 ${loadaddr} esme_fw.bin
+cp.b ${loadaddr} 0x201e0000 ${filesize}
+bootaux 0x1ffe0000 0
+setenv mmcargs "${mmcargs} clk_ignore_unused"
+saveenv
+run mmcargs
+boot
+```
+
 ### Other useful commands
 list yocto layers:
   ```{.sh}
