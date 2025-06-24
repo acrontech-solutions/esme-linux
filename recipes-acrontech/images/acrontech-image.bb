@@ -37,6 +37,7 @@ IMAGE_INSTALL += " \
 	kernel-devsrc \
 	nano \
 	tree \
+	rpmsg-esme \
     ${CLINFO} \
     ${DOCKER} \
 "
