@@ -82,6 +82,15 @@ commit changes, and create patch file:
   ```
 copy patch file to the meta-acrontech directory and git add/commit/push
 
+OR
+commit the changes
+  ```{.sh}
+devtool update-recipe linux-imx -a sources/meta-acrontech
+or like
+devtool update-recipe -n u-boot-imx -a sources/meta-acrontech
+  ```
+
+
 ## make changes on device tree only, and change in running linux
 - export kernel
 - make changes
