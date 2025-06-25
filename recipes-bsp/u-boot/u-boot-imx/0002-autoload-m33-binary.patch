@@ -1,0 +1,45 @@
+From e62c44fc3f2abbf7c4cc69df0522b9bc4b69b37c Mon Sep 17 00:00:00 2001
+From: Csaba Hegedus <csaba.hegedus@acrontech.eu>
+Date: Wed, 25 Jun 2025 16:30:59 +0000
+Subject: [PATCH] autoload m33 binary
+
+---
+ configs/imx93_11x11_evk_defconfig | 2 +-
+ include/configs/imx93_evk.h       | 4 ++++
+ 2 files changed, 5 insertions(+), 1 deletion(-)
+
+diff --git a/configs/imx93_11x11_evk_defconfig b/configs/imx93_11x11_evk_defconfig
+index e39e68dc10a..457a58f69bb 100644
+--- a/configs/imx93_11x11_evk_defconfig
++++ b/configs/imx93_11x11_evk_defconfig
+@@ -30,7 +30,7 @@ CONFIG_FIT=y
+ CONFIG_FIT_SIGNATURE=y
+ CONFIG_DISTRO_DEFAULTS=y
+ CONFIG_OF_SYSTEM_SETUP=y
+-CONFIG_BOOTCOMMAND="run sr_ir_v2_cmd;run distro_bootcmd;run bsp_bootcmd"
++CONFIG_BOOTCOMMAND="run bringup_m33_cmd;run sr_ir_v2_cmd;run distro_bootcmd;run bsp_bootcmd"
+ CONFIG_DEFAULT_FDT_FILE="imx93-11x11-evk-lepton.dtb"
+ CONFIG_SYS_CBSIZE=2048
+ CONFIG_SYS_PBSIZE=2074
+diff --git a/include/configs/imx93_evk.h b/include/configs/imx93_evk.h
+index d9a29bdedf9..700a780fc69 100644
+--- a/include/configs/imx93_evk.h
++++ b/include/configs/imx93_evk.h
+@@ -49,6 +49,9 @@
+ 	"fdt resize 0x400;"\
+ 	"for i in ${nodes}; do fdt rm ${i}; done \0"
+ 
++#define BRINGUP_M33_COMMAND \
++	"bringup_m33_cmd=load mmc 0:1 ${loadaddr} m33_fw.bin; cp.b ${loadaddr} 0x201e0000 ${filesize}; bootaux 0x1ffe0000 0;setenv mmcargs \"${mmcargs} clk_ignore_unused\"; run mmcargs;\0"
++	
+ #define CFG_MFG_ENV_SETTINGS \
+ 	CFG_MFG_ENV_SETTINGS_DEFAULT \
+ 	"initrd_addr=0x83800000\0" \
+@@ -63,6 +66,7 @@
+ 	BOOTENV \
+ 	AHAB_ENV \
+ 	SR_IR_V2_COMMAND \
++	BRINGUP_M33_COMMAND \
+ 	"prepare_mcore=setenv mcore_clk clk-imx93.mcore_booted;\0" \
+ 	"scriptaddr=0x83500000\0" \
+ 	"kernel_addr_r=" __stringify(CONFIG_SYS_LOAD_ADDR) "\0" \

@@ -52,4 +52,5 @@ DOCKER:mx8-nxp-bsp = "docker"
 
 export IMAGE_BASENAME = "acrontech-image"
 
-IMAGE_BOOT_FILES:append = "imx93-11x11-evk-lepton.dtb"
+IMAGE_BOOT_FILES += "imx93-11x11-evk-lepton.dtb"
+IMAGE_BOOT_FILES += "m33_fw.bin"
