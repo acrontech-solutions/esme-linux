@@ -1,30 +1,28 @@
-From da84a7cbc0f278a0e9ef7e6e634b591c0fa60664 Mon Sep 17 00:00:00 2001
+From a80813d60a3e1ce7df001840a00ce4756b2a8476 Mon Sep 17 00:00:00 2001
 From: Csaba Hegedus <csaba.hegedus@acrontech.eu>
-Date: Tue, 24 Jun 2025 15:09:14 +0000
+Date: Wed, 25 Jun 2025 10:21:38 +0000
 Subject: [PATCH] custom u-boot config
 
 ---
- arch/arm/dts/imx93-11x11-evk.dts  |  5 -----
- configs/imx93_11x11_evk_defconfig | 12 ++++++------
- include/configs/imx93_evk.h       |  1 -
- 3 files changed, 6 insertions(+), 12 deletions(-)
+ arch/arm/dts/imx93-14x14-evk-u-boot.dtsi |  6 ------
+ configs/imx93_11x11_evk_defconfig        | 12 ++++++------
+ include/configs/imx93_evk.h              |  1 -
+ 3 files changed, 6 insertions(+), 13 deletions(-)
 
-diff --git a/arch/arm/dts/imx93-11x11-evk.dts b/arch/arm/dts/imx93-11x11-evk.dts
-index b94165230ba..5ee39136439 100644
---- a/arch/arm/dts/imx93-11x11-evk.dts
-+++ b/arch/arm/dts/imx93-11x11-evk.dts
-@@ -172,11 +172,6 @@
- 	};
+diff --git a/arch/arm/dts/imx93-14x14-evk-u-boot.dtsi b/arch/arm/dts/imx93-14x14-evk-u-boot.dtsi
+index bb7b9865d17..55d622c94a6 100644
+--- a/arch/arm/dts/imx93-14x14-evk-u-boot.dtsi
++++ b/arch/arm/dts/imx93-14x14-evk-u-boot.dtsi
+@@ -199,9 +199,3 @@
+ 	bootph-all;
+ 	bootph-pre-ram;
  };
- 
--&lcdif {
--	status = "okay";
--	assigned-clock-rates = <484000000>, <121000000>, <400000000>, <133333333>;
--};
 -
- &lpi2c1 {
- 	#address-cells = <1>;
- 	#size-cells = <0>;
+-&lcdif {
+-	assigned-clocks = <&clk IMX93_CLK_MEDIA_AXI>, <&clk IMX93_CLK_MEDIA_APB>;
+-	assigned-clock-parents = <&clk IMX93_CLK_SYS_PLL_PFD1>, <&clk IMX93_CLK_SYS_PLL_PFD1_DIV2>;
+-	assigned-clock-rates = <400000000>, <133333334>;
+-};
 diff --git a/configs/imx93_11x11_evk_defconfig b/configs/imx93_11x11_evk_defconfig
 index 93b5c5a6575..e39e68dc10a 100644
 --- a/configs/imx93_11x11_evk_defconfig
