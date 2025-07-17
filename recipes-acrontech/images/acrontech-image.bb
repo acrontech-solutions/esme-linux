@@ -39,6 +39,7 @@ IMAGE_INSTALL += " \
 	tree \
 	rpmsg-esme \
 	edgesoft \
+    example \
     ${CLINFO} \
     ${DOCKER} \
 "
