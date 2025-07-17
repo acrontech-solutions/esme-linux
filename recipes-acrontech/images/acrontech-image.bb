@@ -38,6 +38,7 @@ IMAGE_INSTALL += " \
 	nano \
 	tree \
 	rpmsg-esme \
+	edgesoft \
     ${CLINFO} \
     ${DOCKER} \
 "

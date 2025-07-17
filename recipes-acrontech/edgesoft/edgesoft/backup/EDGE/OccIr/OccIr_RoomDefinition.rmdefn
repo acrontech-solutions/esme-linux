@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OccIrRoomDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageRotation>None</ImageRotation>
+  <UseCase>1</UseCase>
+  <InclinationAngleDegX10>0</InclinationAngleDegX10>
+  <AngleBetweenSensorsDegX10>0</AngleBetweenSensorsDegX10>
+  <ViewingAngleDegX10>0</ViewingAngleDegX10>
+  <RoomAngleDegX10>0</RoomAngleDegX10>
+  <RoomZCm>310</RoomZCm>
+  <RoomMaxXCm>400</RoomMaxXCm>
+  <RoomMinXCm>-400</RoomMinXCm>
+  <RoomMaxYCm>400</RoomMaxYCm>
+  <RoomMinYCm>-400</RoomMinYCm>
+</OccIrRoomDefinition>

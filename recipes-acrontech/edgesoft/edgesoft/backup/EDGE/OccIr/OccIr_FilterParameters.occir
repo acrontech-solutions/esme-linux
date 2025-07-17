@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OccIrFilterParam xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <csGainBackChange>15</csGainBackChange>
+  <csStartInSplit>true</csStartInSplit>
+  <csYoungOctoboxMs>15</csYoungOctoboxMs>
+  <csAddOctobox>2</csAddOctobox>
+  <csForceMs>33</csForceMs>
+  <csForceFps>false</csForceFps>
+  <csYoungHiddenMs>-1</csYoungHiddenMs>
+  <csKillYoungHidden>true</csKillYoungHidden>
+  <csMoveDelay>2</csMoveDelay>
+  <csSplitCount>false</csSplitCount>
+  <csMinSamplingE>false</csMinSamplingE>
+  <csMinSamplingS>2</csMinSamplingS>
+  <csStay2sec>0</csStay2sec>
+  <csMinDt>0</csMinDt>
+  <csCloseSplit>90</csCloseSplit>
+  <csFarSplit>180</csFarSplit>
+  <csFarClose>false</csFarClose>
+  <csOctoOverlay>true</csOctoOverlay>
+  <csImgInJson>false</csImgInJson>
+  <csSplitClose>true</csSplitClose>
+  <csNbImage2Skip>0</csNbImage2Skip>
+  <csDebugOutputPath />
+  <csStopFrame>-1</csStopFrame>
+  <csNucEnabled>false</csNucEnabled>
+  <csBlockBackUp>false</csBlockBackUp>
+  <cs1PixelExtend>true</cs1PixelExtend>
+  <csOctoboxExtend>true</csOctoboxExtend>
+  <csNoOccluDelay>2000</csNoOccluDelay>
+  <csThresMove>250</csThresMove>
+  <csAlgoConfid>true</csAlgoConfid>
+  <csLog3>false</csLog3>
+  <csLog1>false</csLog1>
+  <csMaxSplitDist>160</csMaxSplitDist>
+  <csMaxSize>190</csMaxSize>
+  <csDispHidden>false</csDispHidden>
+  <Thresh12min>10</Thresh12min>
+  <TimeSec12min>720</TimeSec12min>
+  <MaxMove>600</MaxMove>
+  <LeaveThresh>15</LeaveThresh>
+  <Socket>false</Socket>
+  <FilterGain>13</FilterGain>
+  <BackGain>-7</BackGain>
+  <NewModels>false</NewModels>
+  <csNoColliding>false</csNoColliding>
+  <csSpeedCst>500</csSpeedCst>
+  <csDebug3Path>debug3.txt</csDebug3Path>
+  <csNb100usSplit>40000</csNb100usSplit>
+</OccIrFilterParam>

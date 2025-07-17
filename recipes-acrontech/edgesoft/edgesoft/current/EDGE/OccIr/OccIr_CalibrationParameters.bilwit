@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WorldImageTransformationParam xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <IsFlir160>true</IsFlir160>
+  <HasCentralCrossHalved>false</HasCentralCrossHalved>
+  <InvertY>false</InvertY>
+  <InvertX>false</InvertX>
+  <ImageCircleRadiusMm>100</ImageCircleRadiusMm>
+  <HasFThetaDistortion>false</HasFThetaDistortion>
+  <RadialDistortionCm2>0</RadialDistortionCm2>
+  <CameraPitchDeg>0</CameraPitchDeg>
+  <CameraYawDeg>0</CameraYawDeg>
+  <CameraRollDeg>0</CameraRollDeg>
+  <CameraPosZCm>310</CameraPosZCm>
+  <CameraPosYCm>0</CameraPosYCm>
+  <CameraPosXCm>0</CameraPosXCm>
+  <LensOffsetYPix>0</LensOffsetYPix>
+  <LensOffsetXPix>0</LensOffsetXPix>
+  <ImageSizeYPix>120</ImageSizeYPix>
+  <ImageSizeXPix>120</ImageSizeXPix>
+  <FocalLengthMm>4</FocalLengthMm>
+  <PixelSizeUm>1</PixelSizeUm>
+</WorldImageTransformationParam>

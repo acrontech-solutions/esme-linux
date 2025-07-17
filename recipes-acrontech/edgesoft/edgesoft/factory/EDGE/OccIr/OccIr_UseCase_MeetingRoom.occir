@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OccIrUseCaseParam xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<cppSplit2Vacant>60</cppSplit2Vacant>
+	<cppVac2OccupMs>5</cppVac2OccupMs>
+	<cppOccup2Vac>5</cppOccup2Vac>
+	<cppCountFilterMs>15000</cppCountFilterMs>
+	<cppHighOcclThr1>250</cppHighOcclThr1>
+	<cppHighOcclThr2>300</cppHighOcclThr2>
+	<cppCreateOnlyHybrid>false</cppCreateOnlyHybrid>
+	<cppBubble>false</cppBubble>
+	<cppBubRadius>50</cppBubRadius>
+	<cppBubMove>100</cppBubMove>
+	<cppKillNewClose>false</cppKillNewClose>
+	<cppSplitLargeBlob>false</cppSplitLargeBlob>
+	<cppOutEntity>true</cppOutEntity>
+	<cppOutMarginCm>100</cppOutMarginCm>
+	<cppConfidStdDelay>360000</cppConfidStdDelay>
+	<cppConfidSplitDelay>180000</cppConfidSplitDelay>
+	<cppCountDelay>0</cppCountDelay>
+	<cppLastEntitySplitRuleEnable>4</cppLastEntitySplitRuleEnable>
+	<cppTrackingDetectionRange>160</cppTrackingDetectionRange>
+	<cppTrackingExtendedDetectionRange>220</cppTrackingExtendedDetectionRange>
+	<cppTrackingHistorySize>200</cppTrackingHistorySize>
+	<cppTrackingMinDisplacement>0.8</cppTrackingMinDisplacement>
+	<cppTrackingIcubationDuration>18</cppTrackingIcubationDuration>
+	<cppTrackingMaxMultiCount>4</cppTrackingMaxMultiCount>
+	<cppTrackingLongConfirmedLimit>20000</cppTrackingLongConfirmedLimit>
+	<cppTrackingMinBlobArea>3000</cppTrackingMinBlobArea>
+	<cppTrackingConfirmedLimit>3000</cppTrackingConfirmedLimit>
+	<cppTrackingConfidenceSize>150</cppTrackingConfidenceSize>
+	<cppTrackingConfidenceLimit>352800</cppTrackingConfidenceLimit>
+	<cppTrackingMaxTrackingOnBlob>5</cppTrackingMaxTrackingOnBlob>
+	<cppTrackingMaxTrackingOnBlobEdge>3</cppTrackingMaxTrackingOnBlobEdge>
+	<cppHumanRadiusCm>17</cppHumanRadiusCm>
+	<cppHumanHeightCm>170</cppHumanHeightCm>
+	<cppHumanLowHeightCm>100</cppHumanLowHeightCm>
+	<cppMinDistNewFar>40</cppMinDistNewFar>
+	<cppMinDistNewClose>10</cppMinDistNewClose>
+	<cppMinDistNewRadius>20</cppMinDistNewRadius>
+</OccIrUseCaseParam>

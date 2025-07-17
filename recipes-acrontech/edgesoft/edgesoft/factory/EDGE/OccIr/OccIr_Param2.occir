@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OccIrParam2 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <csUseSpeed>false</csUseSpeed>
+  <csTbDummy1>0</csTbDummy1>
+  <csCbDummy1>false</csCbDummy1>
+</OccIrParam2>

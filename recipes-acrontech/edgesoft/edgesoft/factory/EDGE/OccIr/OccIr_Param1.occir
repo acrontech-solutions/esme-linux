@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OccIrParam1 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<cppNewCount>true</cppNewCount>
+	<cppRed2GreenMs>2</cppRed2GreenMs>
+	<cppGreen2Dash>30</cppGreen2Dash>
+	<cppKillNoDistance>true</cppKillNoDistance>
+	<cppCountHidden>false</cppCountHidden>
+	<cppKillHiddenSplit>false</cppKillHiddenSplit>
+	<cppEnableSit150>true</cppEnableSit150>
+	<cppHeadWeighting>false</cppHeadWeighting>
+	<cppProb2Ref>true</cppProb2Ref>
+	<cppSupHotPoint>false</cppSupHotPoint>
+	<cppMotionInsideEntityMinBlobSize>2</cppMotionInsideEntityMinBlobSize>
+	<cppMotionOutsideEntityMinBlobSize>20</cppMotionOutsideEntityMinBlobSize>
+	<cppMove2_1>1</cppMove2_1>
+	<cppMove2_2>0</cppMove2_2>
+	<cppMove2_3>0</cppMove2_3>
+	<cppEnableImage4>false</cppEnableImage4>
+	<cppA0Image4>15</cppA0Image4>
+	<cppA1Image4>0</cppA1Image4>
+	<cppA2Image4>0</cppA2Image4>
+	<cppKillLongSplit>true</cppKillLongSplit>
+	<cppHeadCorrection>false</cppHeadCorrection>
+	<cppLongSplit>10</cppLongSplit>
+	<cppMoveOutsideLensPixCount>5</cppMoveOutsideLensPixCount>
+	<cppCameraFieldOfView>160</cppCameraFieldOfView>
+</OccIrParam1>

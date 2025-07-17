@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OccIrEntrancesParam xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Alpha>50</Alpha>
+  <Blue>250</Blue>
+  <Green>200</Green>
+  <Red>250</Red>
+  <EntrancesOn>false</EntrancesOn>
+  <Entrances />
+</OccIrEntrancesParam>

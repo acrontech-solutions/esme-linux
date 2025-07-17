@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OccIrCommParam xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <csConnectTablet>false</csConnectTablet>
+  <ConnectionMode>SilCom</ConnectionMode>
+  <UploadEntrances>true</UploadEntrances>
+  <FileName>C:\Users\pdorster\EDGE Sensor Dropbox\IR Videos\Video for demo 160deg\out.csv</FileName>
+  <FileEnabled>false</FileEnabled>
+  <CommPeriod>5</CommPeriod>
+  <AccessKey>gse64hr987hs</AccessKey>
+  <DeviceId>EdgeSensorX</DeviceId>
+  <Url>legrand.online.myconstelnation.io/rest/constellation/PushStateObject?SentinelName=EDGE&amp;PackageName=EDGE_LEGRAND&amp;AccessKey=1e378291bf9c4893d4e3a5787571adf6cd6637b4</Url>
+  <CommEnabled>false</CommEnabled>
+  <ConnectTablet>false</ConnectTablet>
+  <UartDebugJsonPeriod>10</UartDebugJsonPeriod>
+</OccIrCommParam>

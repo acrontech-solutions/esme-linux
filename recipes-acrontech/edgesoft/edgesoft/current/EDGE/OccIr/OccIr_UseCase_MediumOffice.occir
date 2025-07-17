@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OccIrUseCaseParam xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<cppSplit2Vacant>180</cppSplit2Vacant>
+	<cppVac2OccupMs>5</cppVac2OccupMs>
+	<cppOccup2Vac>5</cppOccup2Vac>
+	<cppCountFilterMs>1</cppCountFilterMs>
+	<cppHighOcclThr1>250</cppHighOcclThr1>
+	<cppHighOcclThr2>300</cppHighOcclThr2>
+	<cppCreateOnlyHybrid>true</cppCreateOnlyHybrid>
+	<cppBubble>false</cppBubble>
+	<cppBubRadius>75</cppBubRadius>
+	<cppBubMove>150</cppBubMove>
+	<cppKillNewClose>false</cppKillNewClose>
+	<cppSplitLargeBlob>false</cppSplitLargeBlob>
+	<cppOutEntity>true</cppOutEntity>
+	<cppOutMarginCm>50</cppOutMarginCm>
+	<cppConfidStdDelay>720000</cppConfidStdDelay>
+	<cppConfidSplitDelay>180000</cppConfidSplitDelay>
+	<cppCountDelay>0</cppCountDelay>
+	<cppLastEntitySplitRuleEnable>4</cppLastEntitySplitRuleEnable>
+	<cppTrackingDetectionRange>160</cppTrackingDetectionRange>
+	<cppTrackingExtendedDetectionRange>220</cppTrackingExtendedDetectionRange>
+	<cppTrackingHistorySize>50</cppTrackingHistorySize>
+	<cppTrackingMinDisplacement>0.3</cppTrackingMinDisplacement>
+	<cppTrackingIcubationDuration>18</cppTrackingIcubationDuration>
+	<cppTrackingMaxMultiCount>3</cppTrackingMaxMultiCount>
+	<cppTrackingLongConfirmedLimit>20000</cppTrackingLongConfirmedLimit>
+	<cppTrackingMinBlobArea>3000</cppTrackingMinBlobArea>
+	<cppTrackingConfirmedLimit>3000</cppTrackingConfirmedLimit>
+	<cppTrackingConfidenceSize>150</cppTrackingConfidenceSize>
+	<cppTrackingConfidenceLimit>705600</cppTrackingConfidenceLimit>
+	<cppTrackingMaxTrackingOnBlob>4</cppTrackingMaxTrackingOnBlob>
+	<cppTrackingMaxTrackingOnBlobEdge>2</cppTrackingMaxTrackingOnBlobEdge>
+	<cppHumanRadiusCm>20</cppHumanRadiusCm>
+	<cppHumanHeightCm>175</cppHumanHeightCm>
+	<cppHumanLowHeightCm>120</cppHumanLowHeightCm>
+	<cppMinDistNewFar>100</cppMinDistNewFar>
+	<cppMinDistNewClose>30</cppMinDistNewClose>
+	<cppMinDistNewRadius>40</cppMinDistNewRadius>
+</OccIrUseCaseParam>

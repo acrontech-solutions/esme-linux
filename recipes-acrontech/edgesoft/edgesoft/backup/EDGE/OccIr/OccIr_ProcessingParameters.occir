@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OccIrAnalyticsParam xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TestPixelCoordinates />
+  <BackgroundUpdateMethod>Global</BackgroundUpdateMethod>
+  <UpdateLowScoreBackground>false</UpdateLowScoreBackground>
+  <MinScoreToCreateEntity>2000</MinScoreToCreateEntity>
+  <MinScoreToMantainEntity>1000</MinScoreToMantainEntity>
+  <SigmaOutsideLens>30000</SigmaOutsideLens>
+  <GaussianSigma>3</GaussianSigma>
+  <GaussianHalfKernelSize>2</GaussianHalfKernelSize>
+  <GradientChangeHighThr>4000</GradientChangeHighThr>
+  <GradientChangeLowThr>2000</GradientChangeLowThr>
+  <MinOcclusion>400</MinOcclusion>
+  <EntityProximityRadiusCm>50</EntityProximityRadiusCm>
+  <TestPixelCoordinatesX>0</TestPixelCoordinatesX>
+  <TestPixelCoordinatesY>0</TestPixelCoordinatesY>
+  <AssymetricalWhenTwoQuadrant>true</AssymetricalWhenTwoQuadrant>
+</OccIrAnalyticsParam>
