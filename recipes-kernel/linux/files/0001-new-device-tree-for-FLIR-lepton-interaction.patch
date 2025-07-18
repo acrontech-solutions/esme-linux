@@ -1,12 +1,12 @@
-From dfac63581adc588aad2a98769b5943d78a5dac8b Mon Sep 17 00:00:00 2001
+From dd1d0ca4f65b20c8ed445446db2854a8ba999ecb Mon Sep 17 00:00:00 2001
 From: Csaba Hegedus <csaba.hegedus@acrontech.eu>
-Date: Wed, 4 Jun 2025 15:12:15 +0000
-Subject: [PATCH] added new device tree
+Date: Fri, 18 Jul 2025 15:28:37 +0000
+Subject: [PATCH] new device tree for FLIR lepton interaction
 
 ---
  arch/arm64/boot/dts/freescale/Makefile        |  4 +-
- .../dts/freescale/imx93-11x11-evk-lepton.dts  | 44 +++++++++++++++++++
- 2 files changed, 47 insertions(+), 1 deletion(-)
+ .../dts/freescale/imx93-11x11-evk-lepton.dts  | 51 +++++++++++++++++++
+ 2 files changed, 54 insertions(+), 1 deletion(-)
  create mode 100644 arch/arm64/boot/dts/freescale/imx93-11x11-evk-lepton.dts
 
 diff --git a/arch/arm64/boot/dts/freescale/Makefile b/arch/arm64/boot/dts/freescale/Makefile
@@ -33,10 +33,10 @@ index efe32533733e..555eced8e8fc 100644
  dtb-$(CONFIG_ARCH_MXC) += imx93-11x11-evk-pmic-pf0900-root.dtb
 diff --git a/arch/arm64/boot/dts/freescale/imx93-11x11-evk-lepton.dts b/arch/arm64/boot/dts/freescale/imx93-11x11-evk-lepton.dts
 new file mode 100644
-index 000000000000..6986d457380e
+index 000000000000..5457f77e20b4
 --- /dev/null
 +++ b/arch/arm64/boot/dts/freescale/imx93-11x11-evk-lepton.dts
-@@ -0,0 +1,44 @@
+@@ -0,0 +1,51 @@
 +// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
 +/*
 + * Copyright 2023 NXP
@@ -44,14 +44,21 @@ index 000000000000..6986d457380e
 +
 +#include "imx93-11x11-evk.dts"
 +
-+/delete-node/ &lpi2c1;
-+/delete-node/ &lpi2c2;
 +/delete-node/ &ethosu_mem;
 +
-+&lpi2c2 {
-+	/delete-property/ dmas;
-+	/delete-property/ dma-names;
++/ {
++	/delete-node/ ethosu;
++
++	};
++	
++&lpi2c1 {
++	status = "disabled";
 +};
++
++&lpi2c2 {
++	status = "disabled";
++};
++
 +
 +&lpi2c3 {
 +	/delete-property/ dmas;
@@ -81,6 +88,7 @@ index 000000000000..6986d457380e
 +&xcvr {
 +	status = "disabled";
 +};
+\ No newline at end of file
 -- 
 2.34.1
 
