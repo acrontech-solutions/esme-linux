@@ -7,7 +7,7 @@ SRC_URI = "file://example.cpp"
 S = "${WORKDIR}"
 
 do_compile() {
-	${CC} example.cpp ${LDFLAGS} -o example
+	${CXX} example.cpp ${LDFLAGS} -o example
 }
 
 do_install() {

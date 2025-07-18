@@ -1,8 +1,9 @@
 #include <iostream>
 #include <cstdint>
+#include <string>
+#include <cstring>
 #include <fcntl.h>
 #include <errno.h>
-#include <string.h>
 #include <unistd.h>
 
 constexpr std::string_view GET_VERSION = "{\"get\":{\"cde\":\"versions\"}}\n";
