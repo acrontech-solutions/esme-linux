@@ -16,45 +16,37 @@ constexpr std::string_view SET_JSON_PERIOD = "{\"post\":{\"cde\":\"config\",\"ar
 
 void sendCommand(int fd, std::string command)
 {
+    std::cout << std::endl << "command sent:" << std::endl;
     ssize_t writtenBytes;
     writtenBytes = write(fd,command.c_str(),command.size());
     if(writtenBytes!=command.size()) {
     	std::cout <<"write error" << std::endl;
     } else {
-    	std::cout << "command sent: " << command << std::endl;
+    	std::cout << "\t" << command;
     }
 }
 
-void waitForResponse(int fd)
+std::string waitForResponse(int fd)
 {
+   	std::cout << "command received: " << std::endl;
 	char message[1024];
+	std::string messageStr;
 	ssize_t readBytes;
 	readBytes = read(fd,message,1024);
 	if(readBytes==0) {
 		std::cout << "EOF, connection closed" << std::endl << std::flush;
 	} else if(readBytes>0) {
 		message[readBytes]='\0';
-		std::string messageStr(message);
-		std::cout << messageStr;
+		messageStr = message;
+		std::cout << "\t" << messageStr;
 	} else {
 		std::cout << "read error: " << strerror(errno) << std::endl;
 	}
+	return messageStr;
 }
 
 int main()
 {
-	/*	open FIFOs
-		configure edgesoft
-		get version
-		get camera serial number
-		set room height to 290 cm
-		set use case to open space
-		set periodic data period to 1 sec
-		set 4 zones
-		get status, wait for operational
-		wait on periodic json messages and print them
-		*/
-
 	std::cout << "edgesoft example application" << std::endl;
 
 	/* Via this FIFO, edgesoft application sends result periodically. */
@@ -99,6 +91,17 @@ int main()
 
 	sendCommand(pipeMiso,std::string(SET_JSON_PERIOD));
 	waitForResponse(pipeMosi);
+
+	/* poll status until operational */
+	bool warmup=true;
+	while(warmup) {
+		sendCommand(pipeMiso,std::string(GET_STATUS));
+		std::string status = waitForResponse(pipeMosi);
+		if(status.find("operational") != std::string::npos) {
+			warmup=false;
+		}
+		sleep(1);
+	}
 
 	char message[1024];
 	while(1) {
