@@ -5,13 +5,13 @@ inherit systemd
 SYSTEMD_AUTO_ENABLE = "enable"
 SYSTEMD_SERVICE:${PN} = "edgesoft.service"
 
-RDEPENDS_${PN} += "bash"
-RDEPENDS_${PN} += "libcrypto"
-RDEPENDS_${PN} += "libssl"
-RDEPENDS_${PN} += "libgpiod"
-RDEPENDS_${PN} += "imagemagick"
-RDEPENDS_${PN} += "zlib"
-RDEPENDS_${PN} += "i2c-tools"
+RDEPENDS:${PN} += "bash"
+RDEPENDS:${PN} += "libcrypto"
+RDEPENDS:${PN} += "libssl"
+RDEPENDS:${PN} += "libgpiod"
+RDEPENDS:${PN} += "imagemagick"
+RDEPENDS:${PN} += "zlib"
+RDEPENDS:${PN} += "i2c-tools"
 
 
 SRC_URI += "file://backup \
@@ -35,4 +35,4 @@ do_install() {
     install -m 0755 ${WORKDIR}/edge_launcher.sh ${D}${ROOT_HOME}
     install -m 0644 ${WORKDIR}/hardware_version.txt ${D}${ROOT_HOME}
 }
-FILES_${PN} = "/root/ ${systemd_unitdir}/system/edgesoft.service"
+FILES:${PN} = "/root/ ${systemd_unitdir}/system/edgesoft.service"
