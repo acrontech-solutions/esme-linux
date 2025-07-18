@@ -35,4 +35,4 @@ do_install() {
     install -m 0755 ${WORKDIR}/edge_launcher.sh ${D}${ROOT_HOME}
     install -m 0644 ${WORKDIR}/hardware_version.txt ${D}${ROOT_HOME}
 }
-FILES_${PN} = "/home/root/ ${systemd_unitdir}/system/edgesoft.service"
+FILES_${PN} = "/root/ ${systemd_unitdir}/system/edgesoft.service"
