@@ -40,6 +40,7 @@ IMAGE_INSTALL += " \
 	rpmsg-esme \
 	edgesoft \
     example \
+    reader \
     ${CLINFO} \
     ${DOCKER} \
 "
