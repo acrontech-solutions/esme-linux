@@ -31,7 +31,6 @@ void waitForResponse(int fd)
 	readBytes = read(fd,message,1024);
 	if(readBytes==0) {
 		std::cout << "EOF, connection closed" << std::endl << std::flush;
-		break;
 	} else if(readBytes>0) {
 		message[readBytes]='\0';
 		std::string messageStr(message);
@@ -66,7 +65,7 @@ int main()
 	}
 
 	/* Via this FIFO, this example application can request things, like change use-case, get list of zones. */
-	int pipeMiso = open("miso.fifo", O_RDONLY);
+	int pipeMiso = open("miso.fifo", O_WRONLY);
 	if(pipeMiso==-1) {
 		std::cout << "failed to open miso.fifo: " << strerror(errno) << std::endl;
 	} else {
@@ -82,22 +81,22 @@ int main()
 	}
 
 
-	sendCommand(pipeMiso,GET_VERSION);
+	sendCommand(pipeMiso,std::string(GET_VERSION));
 	waitForResponse(pipeMosi);
 
-	sendCommand(pipeMiso,GET_CAM_ID);
+	sendCommand(pipeMiso,std::string(GET_CAM_ID));
 	waitForResponse(pipeMosi);
 
-	sendCommand(pipeMiso,GET_STATUS);
+	sendCommand(pipeMiso,std::string(GET_STATUS));
 	waitForResponse(pipeMosi);
 
-	sendCommand(pipeMiso,SET_HEIGHT);
+	sendCommand(pipeMiso,std::string(SET_HEIGHT));
 	waitForResponse(pipeMosi);
 
-	sendCommand(pipeMiso,SET_USECASE);
+	sendCommand(pipeMiso,std::string(SET_USECASE));
 	waitForResponse(pipeMosi);
 
-	sendCommand(pipeMiso,SET_JSON_PERIOD);
+	sendCommand(pipeMiso,std::string(SET_JSON_PERIOD));
 	waitForResponse(pipeMosi);
 
 	char message[1024];
