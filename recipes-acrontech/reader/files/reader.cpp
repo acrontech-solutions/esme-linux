@@ -124,7 +124,7 @@ int main()
         close(dev_fd);
         return 1;
     }
-    std::cout << "\n=== Starting first 10s capture (first.nvid) ===\n";
+    std::cout << "\n=== Starting first 30s capture (first.nvid) ===\n";
     if (!recordLoop(dev_fd, out1, VIDEO_DURATION_S))
     {
         close(dev_fd);
@@ -159,7 +159,7 @@ int main()
         close(dev_fd);
         return 1;
     }
-    std::cout << "\n=== Starting second 10s capture (second.nvid) ===\n";
+    std::cout << "\n=== Starting second 30s capture (second.nvid) ===\n";
     if (!recordLoop(dev_fd, out2, VIDEO_DURATION_S))
     {
         close(dev_fd);
