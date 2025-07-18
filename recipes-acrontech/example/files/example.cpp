@@ -28,7 +28,7 @@ void sendCommand(int fd, std::string command)
 
 std::string waitForResponse(int fd)
 {
-   	std::cout << "command received: " << std::endl;
+   	std::cout << "response received: " << std::endl;
 	char message[1024];
 	std::string messageStr;
 	ssize_t readBytes;
