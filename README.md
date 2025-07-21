@@ -1,13 +1,13 @@
 # esme-linux
 
 ## Requirements
-- windows
-- WSL2
+- windows 11
+- WSL2 with Ubuntu 22.04.4 LTS
 - docker desktop
 - 200 GB storage
 
 ## Do everything in WSL terminal from now on
-### Set git sername and e-mail
+### Set git username and e-mail
 ```{.sh}
   git config --global user.name "Your Name"
   git config --global user.email "your.email@example.com"
@@ -65,6 +65,11 @@ in windows terminal, or power shell:
 ```{.sh}
 ./uuu.exe -b emmc_all acrontech-image-imx93-11x11-lpddr4x-evk.rootfs.wic.zst
 ```
+
+The image is build and reproduced at this point, run the example applications on the target device.
+Notes below this are for generic yocto development.
+
+# Yocto notes
 ## Make changes in the kernel
   ```{.sh}
   devtool modify linux-imx
