@@ -7,11 +7,11 @@ S = "${WORKDIR}"
 
 do_deploy() {
     install -d ${DEPLOY_DIR_IMAGE}
-    install -m 0644 ${S}/m33_fw.bin ${DEPLOY_DIR_IMAGE}/m33_fw.bin
+    install -m 0666 ${S}/m33_fw.bin ${DEPLOY_DIR_IMAGE}/m33_fw.bin
 }
 
 do_install() {
-    # no files installed to rootfs, intentionally empty
+    # no files installed to rootfs intentionally empty
     :
 }
 

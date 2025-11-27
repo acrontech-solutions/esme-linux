@@ -43,6 +43,7 @@ IMAGE_INSTALL += " \
     reader \
     ${CLINFO} \
     ${DOCKER} \
+    rtl8821cu \
 "
 
 CLINFO              ?= ""
