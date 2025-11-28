@@ -41,6 +41,7 @@ IMAGE_INSTALL += " \
 	edgesoft \
     example \
     reader \
+    tcpbridge \
     ${CLINFO} \
     ${DOCKER} \
     rtl8821cu \
