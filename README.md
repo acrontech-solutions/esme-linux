@@ -67,6 +67,15 @@ in windows terminal, or power shell:
 ```
 
 The image is build and reproduced at this point, run the example applications on the target device.
+
+### Enable wifi using a TP-Link Archer T600UB Nano USB adapter
+```{.sh}
+ip link set wlan0 up
+wpa_passphrase "SSID" "password" | tee /etc/wpa_supplicant.conf
+wpa_supplicant -B -c /etc/wpa_supplicant.conf -i wlan0
+udhcpc -i wlan0
+```
+
 Notes below this are for generic yocto development.
 
 # Yocto notes
